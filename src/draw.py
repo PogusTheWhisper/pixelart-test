@@ -26,9 +26,7 @@ class Web:
         )
         st.title("PixelArt-Converter")
         self.message = st.empty()
-        self.upload = st.file_uploader(
-            "Upload Image", type=["jpg", "jpeg", "png", "webp", "jfif"]
-        )
+        self.upload = st.camera_input("Take a picture")
         self.col1, self.col2 = st.columns(2)
         st.write("""Link copy is not available.Please copy or download the image.""")
         self.color = st.selectbox(  # TODO: このあたりわかりにくいから将来的に修正したい
